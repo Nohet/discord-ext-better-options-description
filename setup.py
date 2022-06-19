@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 from os import path
 
 this_directory = path.abspath(path.dirname(__file__))
@@ -22,6 +22,7 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     keywords=["discord", "discord extension", "discord.py", "slashcommands"],
-    packages=find_packages(),
-    install_requires=["git+https://github.com/Rapptz/discord.py", "PyYAML"],
+    packages=["discord.ext.better_options_description"],
+    install_requires=["discord.py", "PyYAML"],
+    dependency_links=["https://github.com/Rapptz/discord.py"],
 )
